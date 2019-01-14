@@ -11,7 +11,7 @@ export class FileItem {
          this.nombreArchivo = archivo.name;
 
          this.estaSubiendo = false;
-         this. progreso = 0;
+         this.progreso = 0;
 
     }
 

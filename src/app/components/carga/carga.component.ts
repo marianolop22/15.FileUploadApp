@@ -10,7 +10,7 @@ import { CargaImagenesService } from 'src/app/services/carga-imagenes.service';
 })
 export class CargaComponent implements OnInit {
 
-  archivos: FileItem[] = [];
+  archivosComponent: FileItem[] = [];
   estaSobreElemento:boolean = false;
   
   constructor ( public _cargaImagenes: CargaImagenesService  ) { }
@@ -22,12 +22,14 @@ export class CargaComponent implements OnInit {
 
   public cargarImagenes () {
 
-    this._cargaImagenes.cargarImagenesFirebase ( this.archivos );
+    this._cargaImagenes.cargarImagenesFirebase ( this.archivosComponent );
     
 
 
   }
 
-
+  public limpiarArchivos () {
+    this.archivosComponent = [];
+  }
 
 }
